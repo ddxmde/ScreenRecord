@@ -17,9 +17,9 @@ PyQt5
   - 选择保存格式
 - 退出
 
-![](./demo/1.jpg)
+![](demo/1.jpg)
 
-![](./demo/2.jpg)
+![](demo/2.jpg)
 
 ## 项目目录
 
