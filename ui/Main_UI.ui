@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>main_window</class>
  <widget class="QWidget" name="main_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>375</width>
+    <height>230</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>375</width>
@@ -737,13 +745,13 @@ border-bottom:1px solid #dcdcdc;color:#cccccc;
                 <widget class="QWidget" name="setting_type_widget" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>85</width>
+                   <width>95</width>
                    <height>35</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>85</width>
+                   <width>95</width>
                    <height>35</height>
                   </size>
                  </property>
@@ -762,13 +770,13 @@ border-bottom:1px solid #dcdcdc;color:#cccccc;
                 <widget class="QWidget" name="widget_12" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>250</width>
+                   <width>240</width>
                    <height>35</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>250</width>
+                   <width>240</width>
                    <height>35</height>
                   </size>
                  </property>

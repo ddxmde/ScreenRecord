@@ -9,6 +9,7 @@ from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 from view.Main_Window import Main_Window
 from components.LabelButton import LabelButton
+import os
 
 class Setting(Main_Window):
     def __init__(self):
@@ -69,6 +70,11 @@ class Setting(Main_Window):
         self.setting_type_avi_button.setSrc(":img/avi.png")
         self.setting_type_gif_button.setSrc(":img/gif.png")
 
+    #打开文件存储位置
+    def save_label_clicked(self):
+        print("打开文件夹")
+        os.system("start explorer %s" % self.save_path)
+
     def setting_ui(self):
         self.setting_save_widget
         self.setting_save_label
@@ -97,5 +103,7 @@ class Setting(Main_Window):
 
         self.success_button.setObjectName("success_button")
 
+        # 点击文件存储位置标签
+        self.setting_save_label.linkActivated.connect(self.save_label_clicked)
 
 
