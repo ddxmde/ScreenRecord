@@ -21,7 +21,7 @@ class LabelTextButton(QLabel):
     # 自定义鼠标移除
     moveOut = pyqtSignal()
 
-    def __init__(self, target, text):
+    def __init__(self,target,text):
         super(LabelTextButton, self).__init__(parent=target)
         self.setText(text)
     

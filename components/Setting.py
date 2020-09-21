@@ -9,6 +9,7 @@ from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 from view.Main_Window import Main_Window
 from components.LabelButton import LabelButton
+from components.LabelTextButton import LabelTextButton
 import os
 
 class Setting(Main_Window):
@@ -71,17 +72,18 @@ class Setting(Main_Window):
         self.setting_type_gif_button.setSrc(":img/gif.png")
 
     #打开文件存储位置
-    def save_label_clicked(self):
-        print("打开文件夹")
+    @QtCore.pyqtSlot()
+    def on_setting_save_label_clicked(self):
+        #print("打开文件夹")
         os.system("start explorer %s" % self.save_path)
 
     def setting_ui(self):
-        self.setting_save_widget
-        self.setting_save_label
-        self.setting_type_mp4_widget
-        self.setting_type_avi_widget
-        self.setting_type_gif_widget
-        self.setting_type_widget
+        # self.setting_save_widget
+        # self.setting_save_label
+        # self.setting_type_mp4_widget
+        # self.setting_type_avi_widget
+        # self.setting_type_gif_widget
+        # self.setting_type_widget
 
         self.setting_save_button = LabelButton(
             self.setting_save_widget, ":img/download.png")
@@ -103,7 +105,15 @@ class Setting(Main_Window):
 
         self.success_button.setObjectName("success_button")
 
+        
         # 点击文件存储位置标签
-        self.setting_save_label.linkActivated.connect(self.save_label_clicked)
+        self.setting_save_label = LabelTextButton(
+            self.widget_8, "")
+        self.setting_save_label.setMinimumSize(QtCore.QSize(300, 35))
+        self.setting_save_label.setMaximumSize(QtCore.QSize(300, 35))
+        self.setting_save_label.setStyleSheet("color: rgb(68, 68, 68);")
+        self.setting_save_label.setObjectName("setting_save_label")
+        self.horizontalLayout_2.addWidget(self.setting_save_label)
+        # self.setting_save_label.linkActivated.connect(self.save_label_clicked)
 
 
