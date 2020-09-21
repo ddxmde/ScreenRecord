@@ -1,0 +1,35 @@
+<RCC>
+  <qresource>
+    <file>img/warning.png</file>
+    <file>img/download.png</file>
+    <file>img/avi.png</file>
+    <file>img/avi1.png</file>
+    <file>img/gif.png</file>
+    <file>img/gif1.png</file>
+    <file>img/mp4.png</file>
+    <file>img/mp41.png</file>
+    <file>img/exit.png</file>
+    <file>img/dot-circle.png</file>
+    <file>img/dot-circle1.png</file>
+    <file>img/exit1.png</file>
+    <file>img/file.png</file>
+    <file>img/file2.png</file>
+    <file>img/folde1r.png</file>
+    <file>img/folder.png</file>
+    <file>img/play.png</file>
+    <file>img/save.png</file>
+    <file>img/save1.png</file>
+    <file>img/screen.png</file>
+    <file>img/screen1.png</file>
+    <file>img/setting.png</file>
+    <file>img/setting1.png</file>
+    <file>img/sound.png</file>
+    <file>img/sound1.png</file>
+    <file>img/stop.png</file>
+    <file>img/success.png</file>
+    <file>img/transcode.png</file>
+    <file>img/transcode1.png</file>
+    <file>img/window.png</file>
+    <file>img/window1.png</file>
+  </qresource>
+</RCC>

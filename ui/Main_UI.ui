@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_window</class>
+ <widget class="QWidget" name="main_window">
+  <property name="minimumSize">
+   <size>
+    <width>375</width>
+    <height>230</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>375</width>
+    <height>230</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>365</width>
+       <height>220</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="menu_block_widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>360</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>360</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QWidget" name="menu_widget" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>360</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>360</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QFrame" name="menu_item_frame_1">
+              <property name="minimumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+#menu_item_frame_1 {
+border-right:1px solid #dcdcdc;color:#cccccc;
+border-bottom:1px solid #dcdcdc;color:#cccccc;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>14</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="menu_play_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(185, 185, 185);</string>
+                 </property>
+                 <property name="text">
+                  <string>开始</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="menu_item_frame_2">
+              <property name="minimumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+#menu_item_frame_2 {
+border-right:1px solid #dcdcdc;color:#cccccc;
+border-bottom:1px solid #dcdcdc;color:#cccccc;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>14</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="menu_full_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(185, 185, 185);</string>
+                 </property>
+                 <property name="text">
+                  <string>全屏</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="menu_item_frame_3">
+              <property name="minimumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+#menu_item_frame_3 {
+border-right:1px solid #dcdcdc;color:#cccccc;
+border-bottom:1px solid #dcdcdc;color:#cccccc;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>14</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="menu_window_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(185, 185, 185);</string>
+                 </property>
+                 <property name="text">
+                  <string>窗口</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="menu_item_frame_4">
+              <property name="minimumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+#menu_item_frame_4 {
+border-right:1px solid #dcdcdc;color:#cccccc;
+border-bottom:1px solid #dcdcdc;color:#cccccc;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>14</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="menu_sound_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(185, 185, 185);</string>
+                 </property>
+                 <property name="text">
+                  <string>静音</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="menu_item_frame_5">
+              <property name="minimumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+#menu_item_frame_5{
+border-right:1px solid #dcdcdc;color:#cccccc;
+border-bottom:1px solid #dcdcdc;color:#cccccc;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>14</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="menu_setting_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(185, 185, 185);</string>
+                 </property>
+                 <property name="text">
+                  <string>设置</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="menu_item_frame_6">
+              <property name="minimumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>59</width>
+                <height>70</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+#menu_item_frame_6 {
+border-bottom:1px solid #dcdcdc;color:#cccccc;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>14</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="menu_close_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(185, 185, 185);</string>
+                 </property>
+                 <property name="text">
+                  <string>退出</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="setting_block_widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>360</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>360</width>
+          <height>80</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_7" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QWidget" name="widget_8" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>350</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>35</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="setting_save_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>300</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(68, 68, 68);</string>
+                 </property>
+                 <property name="text">
+                  <string>保存位置：</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="setting_save_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_9" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>350</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>35</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>15</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="setting_type_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>85</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>85</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>选择格式：</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget_12" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>250</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>250</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <property name="spacing">
+                   <number>10</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QWidget" name="widget_13" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QWidget" name="setting_type_mp4_widget" native="true">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="setting_type_mp4_label">
+                       <property name="styleSheet">
+                        <string notr="true">color: rgb(184, 184, 184);</string>
+                       </property>
+                       <property name="text">
+                        <string>MP4</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_17" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QWidget" name="setting_type_avi_widget" native="true">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="setting_type_avi_label">
+                       <property name="styleSheet">
+                        <string notr="true">color: rgb(184, 184, 184);</string>
+                       </property>
+                       <property name="text">
+                        <string>Avi</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_14" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_6">
+                     <property name="spacing">
+                      <number>5</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QWidget" name="setting_type_gif_widget" native="true">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="setting_type_gif_label">
+                       <property name="styleSheet">
+                        <string notr="true">color: rgb(184, 184, 184);</string>
+                       </property>
+                       <property name="text">
+                        <string>Gif</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="success_block_widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>360</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>360</width>
+          <height>50</height>
+         </size>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QFrame" name="result_frame">
+           <property name="styleSheet">
+            <string notr="true">#result_frame {border-top:1px solid #dcdcdc;}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QWidget" name="widget_19" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>35</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="success_widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>25</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>25</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>黑体</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>录制成功</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../assets/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
