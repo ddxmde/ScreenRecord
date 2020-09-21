@@ -75,7 +75,7 @@ class Setting(Main_Window):
     @QtCore.pyqtSlot()
     def on_setting_save_label_clicked(self):
         #print("打开文件夹")
-        os.system("start explorer %s" % self.save_path)
+        os.startfile(self.save_path)
 
     def setting_ui(self):
         # self.setting_save_widget
