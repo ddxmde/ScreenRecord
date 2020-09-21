@@ -76,4 +76,5 @@ class Main_Window(Ui_main_window):
 
     # 重写鼠标移入事件
     def enterEvent(self, event):
+        #self.setWindowOpacity(1)
         self.setCursor(Qt.SizeAllCursor)

@@ -36,8 +36,8 @@ class Main_View(QWidget, Menu, Setting):
         self.save_path = check_path()
         self.setting_save_label.setText("保存位置："+self.save_path)
         # 文件保存类型
-        self.save_type = 0 # 0-mp4 1-avi 2-gif
-        self.save_types = ["mp4","avi","gif"]
+        self.save_type = 0 # 0-mp4 1-png 2-gif
+        self.save_types = ["mp4","png","gif"]
 
         # 程序运行状态
         self.recording = False # 默认未运行

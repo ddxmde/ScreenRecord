@@ -40,15 +40,18 @@ class Setting(Main_Window):
         self.setting_type_mp4_button.setSrc(":img/mp41.png")
         self.save_type = 0
 
-    # setting_type_avi_button clicked
+    # setting_typpng_button clicked
     @QtCore.pyqtSlot()
-    def on_setting_type_avi_button_clicked(self):
-        self.set_result_tip(":img/warning.png", "暂不支持avi格式")
-        # if self.recording or self.record_target == 1:
-        #     return
-        # self.init_save_type_icons()
-        # self.setting_type_avi_button.setSrc(":img/avi1.png")
-        # self.save_type = 1
+    def on_setting_type_png_button_clicked(self):
+        # self.set_result_tip(":img/warning.png", "暂不支持png格式")
+        if self.recording:
+            return
+        self.init_save_type_icons()
+        self.setting_type_png_button.setSrc(":img/png1.png")
+        self.save_type = 1
+        self.record_sound = False
+        self.menu_sound_button.setSrc(":img/sound.png")
+
 
     # setting_type_gif_button clicked
     @QtCore.pyqtSlot()
@@ -68,7 +71,7 @@ class Setting(Main_Window):
     
     def init_save_type_icons(self):
         self.setting_type_mp4_button.setSrc(":img/mp4.png")
-        self.setting_type_avi_button.setSrc(":img/avi.png")
+        self.setting_type_png_button.setSrc(":img/png.png")
         self.setting_type_gif_button.setSrc(":img/gif.png")
 
     #打开文件存储位置
@@ -81,7 +84,7 @@ class Setting(Main_Window):
         # self.setting_save_widget
         # self.setting_save_label
         # self.setting_type_mp4_widget
-        # self.setting_type_avi_widget
+        # self.setting_type_png_widget
         # self.setting_type_gif_widget
         # self.setting_type_widget
 
@@ -90,8 +93,8 @@ class Setting(Main_Window):
 
         self.setting_type_mp4_button = LabelButton(
             self.setting_type_mp4_widget, ":img/mp41.png")
-        self.setting_type_avi_button = LabelButton(
-            self.setting_type_avi_widget, ":img/avi.png")
+        self.setting_type_png_button = LabelButton(
+            self.setting_type_png_widget, ":img/png.png")
         self.setting_type_gif_button = LabelButton(
             self.setting_type_gif_widget, ":img/gif.png")
         self.success_button = LabelButton(
@@ -100,7 +103,7 @@ class Setting(Main_Window):
 
         self.setting_save_button.setObjectName("setting_save_button")
         self.setting_type_mp4_button.setObjectName("setting_type_mp4_button")
-        self.setting_type_avi_button.setObjectName("setting_type_avi_button")
+        self.setting_type_png_button.setObjectName("setting_type_png_button")
         self.setting_type_gif_button.setObjectName("setting_type_gif_button")
 
         self.success_button.setObjectName("success_button")

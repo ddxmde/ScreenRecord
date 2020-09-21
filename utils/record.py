@@ -46,8 +46,18 @@ class Record_Utils():
     def record(self, pos, size, fps, type, save_path):
         if type == "gif":
             self.recordGif(pos, size, fps, type, save_path)
+        elif type == "png":
+            self.recordPng(pos,size,type,save_path)
         else:
-            self.recordVideo(pos, size, fps, type, save_path)
+            self.recordVideo(pos,size, fps, type, save_path)
+
+    def recordPng(self,pos,size,type,save_path):
+        filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S")+"."+type
+        file_with_path = save_path + "\\" + filename
+
+        bbox = (pos[0], pos[1], size[0], size[1])
+        im = ImageGrab.grab(bbox)
+        im.save(file_with_path)
 
     def recordVideo(self,pos,size,fps,type,save_path):
         filename = datetime.datetime.now().strftime("%Y%m%d%H%M%S")+"."+type

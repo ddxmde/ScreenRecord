@@ -7,7 +7,7 @@
 
 import sys
 from PyQt5 import QtCore
-from PyQt5.QtCore import  QThread, pyqtSignal
+from PyQt5.QtCore import  QThread, pyqtSignal,Qt
 from PyQt5.QtWidgets import QApplication
 from view.Main_Window import Main_Window
 from components.LabelButton import LabelButton
@@ -47,17 +47,20 @@ class Menu(Main_Window):
     @QtCore.pyqtSlot()
     def on_menu_play_button_clicked(self):
         if self.recording:
-            self.record_end_time = datetime.datetime.now()
-            #print("时间戳"+str((self.record_end_time-self.record_start_time).seconds))
+            # self.record_end_time = datetime.datetime.now()
+            # print("时间戳"+str((self.record_end_time-self.record_start_time).seconds))
             self.recording = False
             self.record_thread.stop(self.recording)
             self.menu_play_button.setSrc(":img/play.png")
             self.set_result_tip(":img/transcode1.png", "正在处理数据……")
             self.label.setText("开始")
         else:
-            self.showMinimized()
             self.recording = True
             self.menu_play_button.setSrc(":img/stop.png")
+
+            self.showMinimized()
+
+            #self.setWindowOpacity(0.2)
             self.set_result_tip(":img/dot-circle1.png", "正在录制")
             self.label.setText("停止")
 
@@ -82,11 +85,20 @@ class Menu(Main_Window):
                 r_size = (_app_x+self.record_window.width()-18,
                           _app_y+self.record_window.height()-18)
             self.record_thread = Record_Thread(r_pos,r_size,r_fps,r_type,r_save_path)
-            self.record_start_time = datetime.datetime.now()
+            # self.record_start_time = datetime.datetime.now()
             self.record_thread.start()
             self.record_thread.finish_record.connect(self.success_record_confirm)
     
     def success_record_confirm(self):
+        if self.save_type == 1:
+            # 截图
+            self.recording = False
+            self.menu_play_button.setSrc(":img/play.png")
+            self.label.setText("开始")
+            #self.setWindowOpacity(1)
+            self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window)
+            self.showNormal()
+
         self.set_result_tip(":img/success.png", "录制成功……")
     
     # menu_full_button clicked
@@ -109,9 +121,11 @@ class Menu(Main_Window):
             self.record_window.show()
             #self.record_window.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
             self.record_target = 1
-            self.init_save_type_icons()
-            self.setting_type_gif_button.setSrc(":img/gif1.png")
-            self.save_type = 2
+            if self.save_type == 0:
+                self.save_type = 2
+                self.init_save_type_icons()
+                self.setting_type_gif_button.setSrc(":img/gif1.png")
+
             self.menu_window_button.setSrc(":img/window1.png")
             self.menu_full_button.setSrc(":img/screen.png")
             self.record_sound = False
@@ -181,3 +195,23 @@ class Menu(Main_Window):
         self.menu_sound_button.setObjectName("menu_sound_button")
         self.menu_setting_button.setObjectName("menu_setting_button")
         self.menu_close_button.setObjectName("menu_close_button")
+
+    def keyPressEvent(self, QKeyEvent):  # 键盘某个键被按下时调用
+        if QKeyEvent.modifiers() == Qt.ControlModifier and QKeyEvent.key() == Qt.Key_Q:  # 两键组合
+            #modifiers()   判断修饰键
+            #Qt.NoModifier   没有修饰键
+            #Qt.ShiftModifier    Shift键被按下
+            #Qt.ControlModifier    Ctrl键被按下
+            #Qt.AltModifier      Alt键被按下
+            print('按下了Ctrl-Q键')
+            if self.recording:
+                #self.record_end_time = datetime.datetime.now()
+                #print("时间戳"+str((self.record_end_time-self.record_start_time).seconds))
+                self.recording = False
+                self.record_thread.stop(self.recording)
+                self.menu_play_button.setSrc(":img/play.png")
+                self.set_result_tip(":img/transcode1.png", "正在处理数据……")
+                self.label.setText("开始")
+                self.showNormal()
+                if self.record_target == 1:
+                    self.record_window.close()
