@@ -34,7 +34,7 @@ class Setting(Main_Window):
     # setting_type_mp4_button clicked
     @QtCore.pyqtSlot()
     def on_setting_type_mp4_button_clicked(self):
-        if self.recording or self.record_target==1:
+        if self.recording:
             return
         self.init_save_type_icons()
         self.setting_type_mp4_button.setSrc(":img/mp41.png")

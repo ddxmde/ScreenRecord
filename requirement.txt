@@ -1,5 +1,5 @@
 PyQt5 5.15.1
-opencv-python 4.4.0.42
-imageio 2.9.0
-Pillow 7.2.0
-moviepy 1.0.3
+opencv-python 4.4.0.42(舍弃)
+imageio 2.9.0(舍弃)
+Pillow 7.2.0(舍弃)
+moviepy 1.0.3(舍弃)

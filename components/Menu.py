@@ -12,25 +12,26 @@ from PyQt5.QtWidgets import QApplication
 from view.Main_Window import Main_Window
 from components.LabelButton import LabelButton
 from utils.Animation import Animation
-from utils.record import Record_Utils
+from utils.FFmpegRecord import Record_Utils
 import datetime
 
 class Record_Thread(QThread):
     finish_record = pyqtSignal()
-    def __init__(self, pos, size, fps, type, save_path):  # 通过初始化赋值的方式实现UI主线程传递值给子线程
+    def __init__(self,target, pos, size, fps, type, save_path):  # 通过初始化赋值的方式实现UI主线程传递值给子线程
         super(Record_Thread, self).__init__()
         self.pos = pos
         self.size = size
         self.fps = fps
         self.type = type
         self.save_path = save_path
+        self.target = target
     def stop(self,flag):
         self.record_utils.stop()
 
     def run(self):
         #print("线程开始")
         self.record_utils = Record_Utils()
-        self.record_utils.record(self.pos, self.size, self.fps, self.type, self.save_path)
+        self.record_utils.record(self.target,self.pos, self.size, self.fps, self.type, self.save_path)
         #print("线程结束")
         self.finish_record.emit()
 
@@ -65,8 +66,8 @@ class Menu(Main_Window):
             self.label.setText("停止")
 
             r_fps = 25
-            if self.save_type == 2:
-                r_fps = 5
+            # if self.save_type == 2:
+            #     r_fps = 5
             r_type = self.save_types[self.save_type]
             #print(r_type)
             r_pos = (0, 0)
@@ -78,13 +79,15 @@ class Menu(Main_Window):
                 screenRect_y = screenRect.height()
                 screenRect_x = screenRect.width()
                 r_size = (screenRect_x, screenRect_y)
+                r_target = 0
             else:
                 _app_x = self.record_window.x()
                 _app_y = self.record_window.y()
                 r_pos = (_app_x+18, _app_y+38)
                 r_size = (_app_x+self.record_window.width()-18,
                           _app_y+self.record_window.height()-18)
-            self.record_thread = Record_Thread(r_pos,r_size,r_fps,r_type,r_save_path)
+                r_target = 1
+            self.record_thread = Record_Thread(r_target,r_pos,r_size,r_fps,r_type,r_save_path)
             # self.record_start_time = datetime.datetime.now()
             self.record_thread.start()
             self.record_thread.finish_record.connect(self.success_record_confirm)
@@ -121,11 +124,6 @@ class Menu(Main_Window):
             self.record_window.show()
             #self.record_window.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
             self.record_target = 1
-            if self.save_type == 0:
-                self.save_type = 2
-                self.init_save_type_icons()
-                self.setting_type_gif_button.setSrc(":img/gif1.png")
-
             self.menu_window_button.setSrc(":img/window1.png")
             self.menu_full_button.setSrc(":img/screen.png")
             self.record_sound = False
@@ -197,6 +195,8 @@ class Menu(Main_Window):
         self.menu_close_button.setObjectName("menu_close_button")
 
     def keyPressEvent(self, QKeyEvent):  # 键盘某个键被按下时调用
+        if QKeyEvent.modifiers() == Qt.ControlModifier and QKeyEvent.key() == Qt.Key_C:
+            pass
         if QKeyEvent.modifiers() == Qt.ControlModifier and QKeyEvent.key() == Qt.Key_Q:  # 两键组合
             #modifiers()   判断修饰键
             #Qt.NoModifier   没有修饰键

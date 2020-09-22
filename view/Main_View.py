@@ -61,4 +61,7 @@ class Main_View(QWidget, Menu, Setting):
         self.success_button.setSrc(icon)
         self.label_11.setText(text)
 
+    def keyPressEvent(self, QKeyEvent):  # 键盘某个键被按下时调用
+        if QKeyEvent.modifiers() == Qt.ControlModifier and QKeyEvent.key() == Qt.Key_C:
+            pass
     
