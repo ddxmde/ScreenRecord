@@ -140,9 +140,9 @@ Gif 录制思路变为：先录制视频，再用FFMpeg转gif.
   - 选择保存格式
 - 退出
 
-![](./demo/10.jpg)
+![](https://github.com/ddxmde/ScreenRecord/blob/master/demo/10.jpg)
 
-![](./demo/20.jpg)
+![](https://github.com/ddxmde/ScreenRecord/blob/master/demo/20.jpg)
 
 ### 项目目录
 
@@ -158,7 +158,8 @@ Gif 录制思路变为：先录制视频，再用FFMpeg转gif.
   - Main_ui.py -- Main_UI.ui生成的py文件（主窗口）
   - Record_Window.py -- Record_Window.ui生成的（录制窗口）
 - utils -- 处理工具
-  - record.py -- 处理录制程序
+  - FFmpegRecord.py -- 处理录制程序 （新增）
+  - OpencvRecord -- 处理录制程序（舍弃）
   - Animation.py -- 动画处理程序
 - view -- 视图目录
   - Main_View.py -- 主程序视图

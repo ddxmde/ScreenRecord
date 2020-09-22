@@ -8,6 +8,10 @@
 import sys
 from view.Main_View import Main_View
 from PyQt5.QtWidgets import QApplication
+import pynput
+
+
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -13,6 +13,7 @@ from view.Main_Window import Main_Window
 from components.LabelButton import LabelButton
 from utils.Animation import Animation
 from utils.FFmpegRecord import Record_Utils
+import keyboard
 
 class Record_Thread(QThread):
     finish_record = pyqtSignal()
@@ -42,7 +43,7 @@ class Menu(Main_Window):
         super(Menu, self).__init__()
         self.menu_ui()
         self.setting_button_open = False
-
+        
     # play_button clicked
     @QtCore.pyqtSlot()
     def on_menu_play_button_clicked(self):

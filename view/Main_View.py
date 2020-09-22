@@ -13,7 +13,9 @@ from components.Menu import Menu
 from components.Setting import Setting
 from view.Record_View import Record_View
 import assets.icons
-import os,sys
+import os
+import sys
+import pynput
 
 def check_path():
     if getattr(sys, 'frozen', False):
@@ -56,6 +58,12 @@ class Main_View(QWidget, Menu, Setting):
             self.record_window.windowFlags() | Qt.CustomizeWindowHint | Qt.WindowStaysOnTopHint)
         self.record_window.close()
 
+    def ctrl_shift_0(self):
+        if not self.recording:
+            self.on_menu_play_button_clicked()
+    def esc(self):
+        if self.recording:
+            self.on_menu_play_button_clicked()
 
     def set_result_tip(self,icon,text):
         self.success_button.setSrc(icon)
