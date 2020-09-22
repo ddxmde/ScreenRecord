@@ -8,6 +8,29 @@ PyQt5
 
 更多详见 [requirement.txt](./requirement.txt)
 
+
+
+## 1.1版本更新
+
+**修复bug:**
+
+- 隐藏ffmpeg的命令行窗口
+- 等待录屏处理结束后开始按钮才可以点击
+
+**代码说明：**
+
+隐藏窗口：
+
+```python
+st = subprocess.STARTUPINFO()
+st.dwFlags = subprocess.STARTF_USESHOWWINDOW
+st.wShowWindow = subprocess.SW_HIDE
+
+在subprocess.Popen(startupinfo=st)
+```
+
+
+
 ## 1.0版本更新
 
 **修复bug：**
