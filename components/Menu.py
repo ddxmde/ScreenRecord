@@ -13,7 +13,6 @@ from view.Main_Window import Main_Window
 from components.LabelButton import LabelButton
 from utils.Animation import Animation
 from utils.FFmpegRecord import Record_Utils
-import datetime
 
 class Record_Thread(QThread):
     finish_record = pyqtSignal()
@@ -50,7 +49,7 @@ class Menu(Main_Window):
         if self.recording:
             # self.record_end_time = datetime.datetime.now()
             # print("时间戳"+str((self.record_end_time-self.record_start_time).seconds))
-            self.recording = False
+            # self.recording = False
             self.record_thread.stop(self.recording)
             self.menu_play_button.setSrc(":img/play.png")
             self.set_result_tip(":img/transcode1.png", "正在处理数据……")
@@ -101,7 +100,7 @@ class Menu(Main_Window):
             #self.setWindowOpacity(1)
             self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window)
             self.showNormal()
-
+        self.recording = False
         self.set_result_tip(":img/success.png", "录制成功……")
     
     # menu_full_button clicked

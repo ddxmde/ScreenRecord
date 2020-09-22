@@ -17,6 +17,8 @@ import subprocess
 import math
 from PyQt5.QtCore import QThread, pyqtSignal
 
+
+
 def check_path():
     if getattr(sys, 'frozen', False):
         return sys._MEIPASS+"\\ffmpeg.exe"
@@ -28,6 +30,9 @@ class Record_Utils:
         self.is_running = False
         self.ffmpeg_process = None
         self.ffmpeg_exe = check_path()
+        self.st = subprocess.STARTUPINFO()
+        self.st.dwFlags = subprocess.STARTF_USESHOWWINDOW
+        self.st.wShowWindow = subprocess.SW_HIDE
 
     def record(self, target, pos, size, fps, stype, save_path):
         if stype == "gif":
@@ -72,7 +77,7 @@ class Record_Utils:
         self.is_running = True
         self.ffmpeg_process = subprocess.Popen(
             _cmd, shell=False, stdin=subprocess.PIPE, stdout=subprocess.PIPE, 
-            universal_newlines=True)
+            universal_newlines=True, startupinfo=self.st)
         self.ffmpeg_process.wait()
 
     def recordGif(self, target, pos, size, fps, stype, save_path):
@@ -90,7 +95,8 @@ class Record_Utils:
         _cmd = check_path()+" -i {video_path} {gif_path}".format(
             video_path=self.tmp_video_name,
             gif_path=gif_name)
-        _tmpproces = subprocess.Popen(_cmd, shell=False, universal_newlines=True)
+        _tmpproces = subprocess.Popen(
+            _cmd, shell=False, universal_newlines=True, startupinfo=self.st)
         _tmpproces.wait()
         if os.path.exists(self.tmp_video_name):
             os.remove(self.tmp_video_name)
